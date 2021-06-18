@@ -8,10 +8,14 @@ import Antd from './plugins/Ant'
 // 导入router
 import router from './router'
 
+// 导入store
+import store from './store'
+
 
 import 'ant-design-vue/dist/antd.css';
 
 createApp(App)
 .use(Antd)
 .use(router)
+.use(store)
 .mount('#app')

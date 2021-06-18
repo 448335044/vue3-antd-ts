@@ -1,16 +1,26 @@
 <template>
   <div class="hello">
+    欢迎 {{name}}
     开启v3+antd
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+ import {useStore} from 'vuex';
 
 export default defineComponent({
   name: 'home',
   props: {
     msg: String,
+  },
+  setup () {
+    const store = useStore();
+    console.log('vuex', store.state.user.name);
+    let name = store.state.user.name; // 这里注意指定user模块
+    return {
+      name
+    }
   },
 });
 </script>
