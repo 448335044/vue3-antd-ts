@@ -38,6 +38,26 @@ setup () {
     }
   },
 
+# 安装vuex
+1.npm install vuex@next --save
+2.在store/index.ts文件导入
+import { createStore } from 'vuex'
+使用并暴漏
+export default createStore({
+  getters,
+  modules
+})
+3.在main.ts挂载
+4.页面使用
+import {useStore} from 'vuex';
+setup () {
+    const store = useStore();
+    console.log('vuex', store.state.user.name);
+    let name = store.state.user.name; // 这里注意指定user模块
+    return {
+      name
+    }
+  },
 
 
 
