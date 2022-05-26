@@ -7,7 +7,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
- import {useStore} from 'vuex';
+import {useStore} from 'vuex';
+import homeStore from './homeStore'
+import store from '../store-new'
+store.registerModule('registerModule', homeStore)
 
 export default defineComponent({
   name: 'home',
@@ -15,12 +18,13 @@ export default defineComponent({
     msg: String,
   },
   setup () {
-    const store = useStore();
-    console.log('vuex', store.state.user.name);
-    let name = store.state.user.name; // 这里注意指定user模块
-    return {
-      name
-    }
+    console.log("store11", store)
+    // const store = useStore();
+    // console.log('vuex', store.state.user.name);
+    // let name = store.state.user.name; // 这里注意指定user模块
+    // return {
+    //   name
+    // }
   },
 });
 </script>

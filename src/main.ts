@@ -9,7 +9,9 @@ import Antd from './plugins/Ant'
 import router from './router'
 
 // 导入store
-import store from './store'
+// import store from './store'
+import store from './store-new'
+console.log('store', store)
 
 
 import 'ant-design-vue/dist/antd.css';

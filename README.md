@@ -60,6 +60,11 @@ setup () {
   },
 
 
+分模块时：
+每个模块中需要加上namespaced：true，模块才生效， commit('test/addNum', 111)
+否则当作普通使用
+
+
 
 
 
